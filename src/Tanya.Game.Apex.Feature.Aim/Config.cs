@@ -49,6 +49,10 @@ namespace Tanya.Game.Apex.Feature.Aim
         [JsonPropertyName("yawSpeed")]
         public float YawSpeed => _config.GetProperty<float>();
 
+
+        [JsonPropertyName("friendlyLock")]
+        public bool FriendlyLock => _config.GetProperty<bool>();
+
         #endregion
     }
 }

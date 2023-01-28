@@ -14,5 +14,6 @@
     <ProjectReference Include="..\Tanya.Game.Apex.Core\Tanya.Game.Apex.Core.csproj" />
     <ProjectReference Include="..\Tanya.Game.Apex.Feature.Aim\Tanya.Game.Apex.Feature.Aim.csproj" />
     <ProjectReference Include="..\Tanya.Game.Apex.Feature.Sense\Tanya.Game.Apex.Feature.Sense.csproj" />
+    <ProjectReference Include="..\Tanya.Game.Apex.Feature.Spectators\Tanya.Game.Apex.Feature.Spectators.csproj" />
   </ItemGroup>
 </Project>

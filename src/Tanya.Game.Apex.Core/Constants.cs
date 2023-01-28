@@ -7,5 +7,6 @@
         public const int EntityListSizePlayer = 64 * 32;
         public const float UnitToMeter = 0.0254f;
         public const int VisibilityTicks = (int)(TimeSpan.TicksPerMillisecond * 100);
+        public const int ControlGameMode = 1953394531;
     }
 }

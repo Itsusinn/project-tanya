@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanya.Game.Apex.Feature.Aim
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apex Legends", "Apex Legends", "{AA7B3467-4303-44C6-8D76-440086268FB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanya.Game.Apex.Feature.Spectators", "Tanya.Game.Apex.Feature.Spectators\Tanya.Game.Apex.Feature.Spectators.csproj", "{BCFE49E8-00B6-476A-B505-D8C8C474A5F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{A85CAAF1-168E-4DBE-82BA-F22D8F09584B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A85CAAF1-168E-4DBE-82BA-F22D8F09584B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A85CAAF1-168E-4DBE-82BA-F22D8F09584B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFE49E8-00B6-476A-B505-D8C8C474A5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFE49E8-00B6-476A-B505-D8C8C474A5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFE49E8-00B6-476A-B505-D8C8C474A5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFE49E8-00B6-476A-B505-D8C8C474A5F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{0C086AF9-D01F-4530-8737-5969E6215F7C} = {AA7B3467-4303-44C6-8D76-440086268FB5}
 		{15EBAD73-19CA-4567-9DD4-84371A3DB229} = {AA7B3467-4303-44C6-8D76-440086268FB5}
 		{A85CAAF1-168E-4DBE-82BA-F22D8F09584B} = {AA7B3467-4303-44C6-8D76-440086268FB5}
+		{BCFE49E8-00B6-476A-B505-D8C8C474A5F9} = {AA7B3467-4303-44C6-8D76-440086268FB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {458936D3-F29B-4CD2-AB0A-0FF003EAAF97}

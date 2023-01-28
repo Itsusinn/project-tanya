@@ -53,7 +53,8 @@ namespace Tanya.Game.Apex.Models
         public uint PlayerTeamNum => _ini.Get("RecvTable.DT_BaseEntity", "m_iTeamNum");
         public uint PlayerVecPunchWeaponAngle => _ini.Get("DataMap.C_Player", "m_currentFrameLocalPlayer.m_vecPunchWeapon_Angle");
         public uint PlayerViewAngle => _ini.Get("DataMap.C_Player", "m_ammoPoolCapacity") - 0x14;
-
+        public uint FYaw => _ini.Get("DataMap.C_Player", "m_currentFramePlayer.m_ammoPoolCount") - 0x8;
+        public uint GameMode => _ini.Get("ConVars", "mp_gamemode") + 0x58;
         #endregion
     }
 }

@@ -128,7 +128,7 @@ namespace Tanya.Game.Apex.Feature.Aim
                 }
                 else if (_target == null || _targetPreviousOrigin == null)
                 {
-                    var target = Find(state, localPlayer, targetType == TargetType.All);
+                    var target = Find(state, localPlayer, targetType == TargetType.All && _config.FriendlyLock);
                     if (target == null) return;
                     _target = target;
                     _targetLockTicks = frameTime.Ticks;

@@ -16,6 +16,7 @@ namespace Tanya.Game.Apex
             services.AddHostedService<WindowsService>();
             Feature.Aim.Bootstrap.ConfigureServices(services);
             Feature.Sense.Bootstrap.ConfigureServices(services);
+            Feature.Spectators.Bootstrap.ConfigureServices(services);
         }
 
         #endregion
