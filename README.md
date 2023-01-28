@@ -4,63 +4,13 @@
 
 # Installation
 
-This guide is written for *Ubuntu*. For other Linux flavors, adapt commands where needed.
+## (1) Hide Process
 
-## (1) Allow Root Login
+> We'll ensure that non-root users are unable to see the `project-tanya` service.
 
-We'll ensure that the `root` user can login.
+See libprocesshider
 
-1. Configure your `root` user password:
-
-```
-sudo passwd
-```
-
-See [this page for more information](https://www.cyberciti.biz/faq/how-can-i-log-in-as-root/) on the root user.
-
-## (2) Enable Process Isolation
-
-We'll ensure that non-root users are unable to see the `project-tanya` service.
-
-1. Switch to the `root` user:
-
-```
-su
-```
-
-2. Install dependencies:
-
-```
-apt install -y vim
-```
-
-3. Open `/etc/fstab` with *vim*:
-
-```
-vim /etc/fstab
-```
-
-4. Add the following line:
-
-```
-proc /proc proc defaults,nosuid,nodev,noexec,relatime,hidepid=1 0 0
-```
-
-5. Reboot your system:
-
-```
-reboot
-```
-
-6. Check that your non-root user cannot see root processes:
-
-```
-ps aux
-```
-
-See [this page for more information](https://www.kernel.org/doc/Documentation/filesystems/proc.txt) on process isolation.
-
-## (3) Disable Process Tracing
+## (2) Disable Process Tracing
 
 We'll ensure that non-root users cannot use `ptrace` capabilities.
 
@@ -96,7 +46,7 @@ sysctl kernel.yama.ptrace_scope
 
 See [this page for more information](https://www.kernel.org/doc/Documentation/security/Yama.txt) on process tracing.
 
-## (4) Install .NET
+## (3) Install .NET
 
 We'll ensure that `project-tanya` can be compiled with *.NET*.
 
@@ -117,7 +67,7 @@ su
 apt update && apt install -y dotnet-sdk-6.0
 ```
 
-## (5) Build Service
+## (4) Build Service
 
 We'll build `project-tanya`, so we can register it as a service:
 
@@ -163,7 +113,7 @@ chmod +x service-build.sh
 ./service-build.sh
 ```
 
-## (6) Install Service
+## (5) Install Service
 
 We'll install `project-tanya` as a service:
 
