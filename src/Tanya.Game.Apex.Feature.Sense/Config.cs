@@ -18,6 +18,8 @@ namespace Tanya.Game.Apex.Feature.Sense
         #endregion
 
         #region Properties
+        [JsonPropertyName("enable")]
+        public bool Enable => _config.GetProperty<bool>();
 
         [JsonPropertyName("distance")]
         public int Distance => _config.GetProperty<int>();

@@ -20,6 +20,9 @@ namespace Tanya.Game.Apex.Feature.Sense
 
         public void Tick(DateTime frameTime, State state)
         {
+            if (!_config.Enable){
+                return;
+            }
             if (state.Players.TryGetValue(state.LocalPlayer, out var localPlayer))
             {
                 foreach (var (_, player) in state.Players)
