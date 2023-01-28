@@ -40,7 +40,7 @@ namespace Tanya.Game.Apex.Models
         public uint ButtonInZoom => _ini.Get("Buttons", "in_zoom");
         public uint CoreEntityList => _ini.Get("Miscellaneous", "cl_entitylist");
         public uint CoreLevelName => _ini.Get("Miscellaneous", "LevelName");
-        public uint CoreLocalPlayer => _ini.Get("Miscellaneous", "LocalPlayer");
+        public uint CoreLocalPlayer => _ini.Get("Miscellaneous", "LocalPlayer") + 0x8;
         public uint EntityLastVisibleTime => _ini.Get("Miscellaneous", "CPlayer!lastVisibleTime");
         public uint EntityLocalOrigin => _ini.Get("DataMap.CBaseViewModel", "m_localOrigin");
         public uint EntitySignifierName => _ini.Get("RecvTable.DT_BaseEntity", "m_iSignifierName");
