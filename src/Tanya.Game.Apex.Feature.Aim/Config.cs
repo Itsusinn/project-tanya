@@ -22,6 +22,10 @@ namespace Tanya.Game.Apex.Feature.Aim
         [JsonPropertyName("distance")]
         public int Distance => _config.GetProperty<int>();
 
+
+        [JsonPropertyName("aimDistance")]
+        public int AimDistance => _config.GetProperty<int>();
+
         [JsonPropertyName("lockTime")]
         public int LockTime => _config.GetProperty<int>();
 
@@ -53,6 +57,11 @@ namespace Tanya.Game.Apex.Feature.Aim
         [JsonPropertyName("friendlyLock")]
         public bool FriendlyLock => _config.GetProperty<bool>();
 
+        [JsonPropertyName("ignoreKockDown")]
+        public bool IgnoreKockDown => _config.GetProperty<bool>();
+
+        [JsonPropertyName("lockWhenSpeed")]
+        public bool LockWhenSpeed => _config.GetProperty<bool>();
         #endregion
     }
 }

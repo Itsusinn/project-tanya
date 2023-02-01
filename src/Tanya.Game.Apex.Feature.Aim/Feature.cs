@@ -39,10 +39,15 @@ namespace Tanya.Game.Apex.Feature.Aim
 
             foreach (var target in state.IterateTargets().Where(x => x.IsValid(localPlayer) && x.Visible))
             {
+                // Check contidions
+                if (_config.IgnoreKockDown && target.BleedoutState != 0) continue;
+
                 // Calculate the distance.
                 var distance = localPlayer.LocalOrigin.Distance2(target.LocalOrigin) * Constants.UnitToMeter;
-                if (distance >= _config.Distance) continue;
-
+                if (
+                    (distance >= _config.Distance && state.Buttons.InZoom == 0) ||
+                    (distance >= _config.AimDistance && state.Buttons.InZoom != 0)
+                ) continue;
                 // Calculate the view angle delta.
                 var desiredAngle = AdjustSelf(localPlayer).GetDesiredAngle(AdjustTarget(target));
                 var deltaX = MathF.Abs(localPlayer.ViewAngle.X - desiredAngle.X);
@@ -117,7 +122,7 @@ namespace Tanya.Game.Apex.Feature.Aim
         {
             if (state.Players.TryGetValue(state.LocalPlayer, out var localPlayer))
             {
-                var targetType = state.GetTargetType(localPlayer);
+                var targetType = state.GetTargetType(localPlayer, _config);
                 if (targetType == TargetType.None)
                 {
                     _target = null;

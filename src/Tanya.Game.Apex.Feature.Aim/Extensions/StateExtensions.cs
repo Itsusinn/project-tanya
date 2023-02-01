@@ -10,7 +10,7 @@ namespace Tanya.Game.Apex.Feature.Aim.Extensions
     {
         #region Statics
 
-        public static TargetType GetTargetType(this State state, Player localPlayer)
+        public static TargetType GetTargetType(this State state, Player localPlayer, Config config)
         {
             if (localPlayer.BleedoutState != 0)
             {
@@ -22,11 +22,14 @@ namespace Tanya.Game.Apex.Feature.Aim.Extensions
                 return state.Buttons.InSpeed != 0 ? TargetType.All : TargetType.Enemy;
             }
 
-            if (state.Buttons.InSpeed != 0)
+            if (state.Buttons.InSpeed != 0 && state.Buttons.InAttack != 0)
             {
                 return TargetType.Enemy;
             }
-
+            if (state.Buttons.InSpeed != 0 && state.Buttons.InZoom != 0)
+            {
+                return TargetType.Enemy;
+            }
             return TargetType.None;
         }
 
